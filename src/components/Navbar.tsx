@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Code2, Github, Linkedin, Mail } from 'lucide-react';
 import { Link } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';

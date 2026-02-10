@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, ArrowUpRight, Download, Play, X } from 'lucide-react';
 import PehnavaHomePage from '../assets/img/pehanvahome.png';

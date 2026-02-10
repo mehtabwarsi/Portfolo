@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Navbar, Hero, About, Skills, Projects, Contact, Footer } from './components';
 
 const App = () => {
