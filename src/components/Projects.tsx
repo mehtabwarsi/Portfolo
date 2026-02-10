@@ -5,6 +5,8 @@ import PehnavaHomePage from '../assets/img/pehanvahome.png';
 import OneTapPdf1 from '../assets/img/OneTapPdf1.png';
 import OneTapPDF2 from '../assets/img/OneTapPDF2.png';
 import OneTapPdf3 from '../assets/img/OneTapPdf3.png';
+import OneTapOcr1 from '../assets/img/OneTapOCR.png';
+
 
 const projects = [
     {
@@ -27,6 +29,19 @@ const projects = [
         image: OneTapPdf1,
         demo: 'https://drive.google.com/uc?export=download&id=1FXGtlNdIbZJM9gxRnwIxZor8VTE6boRW', // Direct Download Link
         video: 'https://www.youtube.com/embed/VZiHpTEsAww',
+        code: null,
+        isApk: true
+    },
+    {
+        title: 'OneTapOCR',
+        description: 'A native Android application leveraging Google ML Kit for high-accuracy text recognition. Scan text via live camera or gallery, extract content, and copy it instantly.',
+        tags: ['Kotlin', 'Android SDK', 'Google ML Kit', 'CameraX', 'OCR'],
+        images: [
+            OneTapOcr1,
+        ],
+        image: OneTapOcr1,
+        demo: '#', // Placeholder for APK link
+        video: 'https://www.youtube.com/embed/MtIH_ciPtYw',
         code: null,
         isApk: true
     },
@@ -120,7 +135,34 @@ const Projects = () => {
                             <div className="relative p-5 sm:p-6 bg-linear-to-b from-white/5 to-transparent">
                                 {project.images && project.images.length > 1 ? (
                                     <BentoGallery images={project.images} />
+                                ) : project.isApk ? (
+                                    /* Single Mobile Screenshot Showcase */
+                                    <div className="h-[300px] w-full rounded-2xl overflow-hidden border border-white/10 relative bg-slate-800/50 flex items-center justify-center p-4">
+                                        <motion.div
+                                            className="h-full aspect-9/19 relative z-10 shadow-2xl rounded-xl overflow-hidden border border-white/20"
+                                            whileHover={{ scale: 1.05 }}
+                                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                        >
+                                            <img
+                                                src={project.image as any}
+                                                alt={project.title}
+                                                className="w-full h-full object-cover"
+                                            />
+                                            {/* Screen Shine */}
+                                            <div className="absolute inset-0 bg-linear-to-tr from-white/10 to-transparent pointer-events-none" />
+                                        </motion.div>
+
+                                        {/* Background Blurred Version for depth */}
+                                        <div className="absolute inset-0 opacity-20 blur-3xl scale-110 pointer-events-none">
+                                            <img
+                                                src={project.image as any}
+                                                alt=""
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+                                    </div>
                                 ) : (
+                                    /* Standard Web/Large Screenshot */
                                     <div className="aspect-video rounded-2xl overflow-hidden border border-white/10 relative bg-slate-800">
                                         <img
                                             src={project.image as any}
@@ -133,7 +175,7 @@ const Projects = () => {
 
                                 {/* Overlay Actions */}
                                 <div className="absolute inset-0 z-20 flex items-center justify-center gap-4 bg-slate-950/70 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-all duration-300">
-                                    {project.video && project.video !== '#' && (
+                                    {project.video && (
                                         <motion.button
                                             whileHover={{ scale: 1.1 }}
                                             whileTap={{ scale: 0.9 }}
@@ -143,7 +185,7 @@ const Projects = () => {
                                             <Play size={24} fill="currentColor" />
                                         </motion.button>
                                     )}
-                                    {project.demo && project.demo !== '#' && (
+                                    {project.demo && (
                                         <motion.a
                                             whileHover={{ scale: 1.1 }}
                                             whileTap={{ scale: 0.9 }}
