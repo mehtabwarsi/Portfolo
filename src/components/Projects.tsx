@@ -27,7 +27,7 @@ const projects = [
             OneTapPdf3,
         ],
         image: OneTapPdf1,
-        demo: 'https://drive.google.com/uc?export=download&id=1FXGtlNdIbZJM9gxRnwIxZor8VTE6boRW', // Direct Download Link
+        demo: 'https://drive.google.com/file/d/1FXGtlNdIbZJM9gxRnwIxZor8VTE6boRW/view?usp=sharing', // Direct Download Link
         video: 'https://www.youtube.com/embed/VZiHpTEsAww',
         code: null,
         isApk: true
@@ -40,18 +40,10 @@ const projects = [
             OneTapOcr1,
         ],
         image: OneTapOcr1,
-        demo: '#', // Placeholder for APK link
+        demo: 'https://drive.google.com/file/d/1hfBt6nHBWi6vBxn5g5tJw0GdL2vtcPT6/view?usp=sharing', // Placeholder for APK link
         video: 'https://www.youtube.com/embed/MtIH_ciPtYw',
         code: null,
         isApk: true
-    },
-    {
-        title: 'Social Connect',
-        description: 'A real-time social networking mobile app featuring chat, post sharing, and discovery of nearby communities.',
-        tags: ['React Native', 'Node.js', 'Socket.io', 'MongoDB'],
-        image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?fit=crop&w=800&q=80',
-        demo: '#',
-        code: '#',
     },
 ];
 
