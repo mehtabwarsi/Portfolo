@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-scroll';
-import resume from '../assets/img/resume.pdf'
+import resume from '../assets/img/Mehtab_Warsi_Resume_v3.pdf'
 
 const Hero = () => {
     return (
